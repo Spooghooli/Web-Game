@@ -33,7 +33,7 @@ function setup() {
   player = createSprite(900, 150, 50, 100)
 
   platforms = new Group()
-  platform = createSprite(900, 300);
+  platform = createSprite(900, 290);
   platform.addImage(loadImage('images/elementGlass017.png'));
   platforms.add(platform)
   // platform2 = createSprite(1300, 200)
@@ -42,7 +42,7 @@ function setup() {
   platform3 = createSprite(1110, 450)
   platform3.addImage(loadImage('images/elementStone013.png'));
   platforms.add(platform3)
-  platform4 = createSprite(680, 450);
+  platform4 = createSprite(680, 445);
   platform4.addImage(loadImage('images/elementWood012.png'));
   platforms.add(platform4)
   platform5 = createSprite(680, 600);
@@ -60,10 +60,10 @@ function setup() {
   platform9 = createSprite(1560, 600);
   platform9.addImage(loadImage('images/elementMetal013.png'));
   platforms.add(platform9)
-  platform10 = createSprite(1560, 450);
+  platform10 = createSprite(1560, 445);
   platform10.addImage(loadImage('images/elementMetal013.png'));
   platforms.add(platform10)
-  platform11 = createSprite(1340, 300);
+  platform11 = createSprite(1340, 290);
   platform11.addImage(loadImage('images/elementMetal051.png'));
   platforms.add(platform11)
 
@@ -75,7 +75,7 @@ function setup() {
 
   coins = new Group();
   for (var i = 0; i < 10; i++) {
-    x = random(400, width-400)
+    x = random(500, width-500)
     y = random(100, height-400)
     var c = createSprite(x, y, 10, 10)
     c.addImage(loadImage('images/coin.png'))
@@ -129,7 +129,7 @@ function draw() {
   }
   if (mouseIsPressed && player.overlap(platforms)){
     player.changeAnimation('jumping')
-    player.velocity.y = -15
+    player.velocity.y = -20
     if(s_jump.isPlaying()==false){
       s_jump.play()
     }
