@@ -21,7 +21,7 @@ function setup() {
 
   song = loadSound('sound/01_LOOP_COOL_ENOUGH.ogg')
   song.setLoop(true)
-  song.setVolume(0.29)
+  song.setVolume(0.2)
   s_jump = loadSound('sound/jump-1.wav')
   s_walk = loadSound('sound/bonk-4.wav')
   s_bonk = loadSound('sound/footstep.wav')
